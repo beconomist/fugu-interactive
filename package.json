@@ -1,0 +1,33 @@
+{
+  "name": "fugu-interactive",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A landing page to present fugu-interactive concept",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "bootstrap": "^3.3.6"
+  },
+  "engines": {
+    "node": "6.2.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beconomist/fugu-interactive.git"
+  },
+  "keywords": [
+    "iOS app",
+    "node",
+    "express"
+  ],
+  "author": "Bao Wen Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beconomist/fugu-interactive/issues"
+  },
+  "homepage": "https://github.com/beconomist/fugu-interactive#readme",
+  "devDependencies": {}
+}
