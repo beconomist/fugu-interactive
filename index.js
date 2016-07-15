@@ -74,6 +74,6 @@ var server = http.createServer(function(request, response) {
   console.log('absPath: ' + absPath);
 });
 
-server.listen(3000, function() {
+server.listen(process.env.PORT || 3000, function() {
   console.log("Fugu-Interactive server listening on port 3000.");
 })
