@@ -4,18 +4,9 @@
   font-family: 'Noto Sans TC', sans-serif;
 }
 
-/*div {
-  border: 2px solid red;
-}
-
-section {
-  border: 2px solid blue;
-}*/
-
 .global-nav {
   background-color: #000;
   width: 100%;
-  /*min-width: 1024px;*/
   max-height: 44px;
 }
 
@@ -39,10 +30,17 @@ section {
   text-align: center;
 }
 
-/*.main .banner-image:first-child {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}*/
+#iphone-gif {
+  position: relative;
+  top:20px;
+  width: 20%;
+  margin-right: 20px;
+}
+
+#ipad-gif {
+  width: 70%;
+}
+
 
 img {
   width: 100%;
@@ -82,10 +80,14 @@ img {
 }
 
 .next-button {
-  /*display: inline-block;*/
   width: 200px;
   background-color: #000;
   color: #fff
+}
+
+.btn-submit {
+  width: 200px;
+  font-size: 18px;
 }
 
 .how-to {
@@ -149,6 +151,11 @@ ul.topnav li a:hover {
 ul.topnav li.icon {
   display: none;
 }
+.section.pricing {
+  margin: auto;
+  text-align: center;
+  padding: 100px;
+}
 
 @media screen and (max-width: 680px) {
   ul.topnav li:not(:first-child) {
@@ -161,6 +168,7 @@ ul.topnav li.icon {
   /* The "responsive" class is added */
   ul.topnav.responsive {
     position: relative;
+    z-index: 99;
   }
   ul.topnav.responsive li.icon {
     position: absolute;;
@@ -192,6 +200,7 @@ ul.topnav li.icon {
   .global-nav-content {
     width: 970px;
   }
+
   .banner-description-side {
     top: 90px;
     left: 660px;
@@ -203,7 +212,22 @@ ul.topnav li.icon {
   .round-shape {
     margin: 15px;
   }
+  #iphone-gif {
+    position: relative;
+    top:60px;
+    width: 18%;
+    margin-right: 20px;
+    /*display:inline-block;*/
+  }
+  #ipad-gif {
+    width: 70%;
+    /*display:inline-block;*/
+  }
+
 }
+
+
+
 @media (min-width: 1200px) {
   .global-nav-content {
     width: 1170px;
@@ -224,7 +248,7 @@ ul.topnav li.icon {
   }
   section.branding .banner-image, section.social-media .banner-image {
     position: relative;
-    left: -300px;
+    left: -160px;
   }
   section.branding .banner-description-side, section.social-media .banner-description-side {
     position: absolute;;
@@ -237,6 +261,18 @@ ul.topnav li.icon {
   .round-shape {
     margin: 30px;
   }
+  #iphone-gif {
+    position: relative;
+    top:70px;
+    width: 18%;
+    margin-right: 20px;
+    /*display:inline-block;*/
+  }
+  #ipad-gif {
+    width: 70%;
+    /*display:inline-block;*/
+  }
+
 
 
 }

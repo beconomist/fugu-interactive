@@ -8,7 +8,11 @@
   <title> Fugu Interactive </title>
   <link rel='stylesheet' type='text/css' href='/stylesheets/bootstrap.min.css'>
   <link rel='stylesheet' type='text/css' href='/stylesheets/style.css' >
-  <script src="/js/ui.js"></script>
+
+  <!-- Image Carousel Plugin -->
+  <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
+  <!-- Page Scroll Plugin -->
 </head>
 
 <body id="home">
@@ -30,9 +34,10 @@
 
 <div class="container">
 
-  <section class="main" id="main">
+  <section class="section main" id="main">
     <div class="banner-image">
-      <img alt="iPad and iPhone" src="/images/ipad-and-iphone.png">
+      <img id="iphone-gif" alt="Gif Animation on iPhone" src="/images/iPhone-gif.gif">
+      <img id="ipad-gif" alt="Gif Animation on iPad" src="/images/iPad-gif.gif">
     </div>
     <div class="banner-description">
       <h2>和顧客互動，不曾這麼簡單</h2>
@@ -41,25 +46,29 @@
       <a class="btn btn-default btn-lg next-button" href="#branding" role="button">使用情境</a>
     </div>
   </section>
-  <section class="branding" id="branding">
-    <div class="banner-image">
-      <img alt="Branding" src="/images/branding.png">
+
+  <section class="section branding" id="branding">
+    <div class="banner-image image-slider">
+          <div>
+            <img alt="Branding Image" src="/images/branding.png">
+          </div>
+          <div>
+            <img alt="Branding Slogan" src="/images/branding-slogan.png">
+          </div>
     </div>
     <div class="banner-description-side">
       <h2>品牌溝通，建立顧客忠誠度</h2>
       <p>
         傳達品牌意象，定義消費族群，建立顧客忠誠度，不曾如此簡單。以鮮明的視覺圖像，充分表達店家職人精神；以簡潔有力的文字，訴說一百個顧客選擇這裡的理由。因為，你比誰都清楚顧客的需求。
       </p>
-      <div class="pricing">價格</div>
     </div>
     <div class="banner-action">
       <a class="btn btn-default btn-lg next-button" href="#product-details" role="button">使用情境</a>
     </div>
-
   </section>
   <section class="product-details" id="product-details">
     <div class="banner-image">
-      <img alt="Product Details"  src="/images/product-details.png">
+      <img alt="Product Details"  src="/images/facebook-origami-demo.gif">
     </div>
     <div class="banner-description-side">
       <h2>產品故事，愈來愈精彩可期</h2>
@@ -67,14 +76,18 @@
         品牌，不只是一個漂亮的 Logo，更不僅止於產品本身。因為設計師敏銳的觀察力，品牌得以創新；因為設計師細膩的工匠精神，品牌得以實踐。品牌，不只是一張紙、一句話，很顯然地，她需要更多元的方式表達自己。
       </p>
     </div>
-    <div class="pricing">Pricing</div>
     <div class="banner-action">
       <a class="btn btn-default btn-lg next-button" href="#social-media" role="button">使用情境</a>
     </div>
   </section>
-  <section class="social-media" id="social-media">
-    <div class="banner-image">
-      <img alt="Social Media" src="/images/social-media.png">
+  <section class="section social-media" id="social-media">
+    <div class="banner-image image-slider">
+      <div>
+        <img alt="Social Media" src="/images/social-media.png">
+      </div>
+      <div>
+        <img alt="Social Media" src="/images/social-media-instagram.png">
+      </div>
     </div>
     <div class="banner-description-side">
     <h2>顧客讚美，是最佳行銷利器</h2>
@@ -82,14 +95,28 @@
       不論是 Facebook、Instagram 或是 Twitter，當顧客大方讚美時，我們便應大方地讓其他顧客知道，這除了是品牌精進的原動力之外，更是您最佳的行銷利器。
     </p>
     </div>
-    <div class="pricing">Pricing</div>
+
   </section>
-  <section class="how-to row" id="how-to">
+  <section class="section how-to row" id="how-to">
     <h2> 史上最簡單的數位看板。 </h2>
     <div class="col-md-3 round-shape">找到舊 iPad</div>
     <div class="col-md-3 round-shape">下載 Fugu</div>
     <div class="col-md-3 round-shape">擺放定位</div>
     <div class="col-md-3 round-shape">資訊排程</div>
+  </section>
+
+  <section class="section pricing" id="pricing">
+
+       <h2> 謝謝您的興趣，我們會儘速與您聯繫 </h2>
+
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">電子信箱</label>
+  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="例如：user@example.com">
+  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit">送出</button>
+        </form>
   </section>
 
   <footer>
@@ -101,7 +128,14 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
  <!-- Include all compiled plugins (below), or include individual files as needed -->
+
  <script src="/js/bootstrap.min.js"></script>
+
+ <!-- Image Carousel Plugin -->
+ <script type="text/javascript" src="/slick/slick.min.js"></script>
+  <!-- Page Scroll Plugin -->
+ <script type="text/javascript" src="/js/jquery.smint.js"></script>
+<script src="/js/ui.js"></script>
 </body>
 
 
