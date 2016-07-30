@@ -11,8 +11,10 @@ $('.image-slider').slick({
   dots: true
 });
 
-$('.topnav').smint({
-  'scrollSpeed': 1000
-});
+
+$('.round-shape').hover(function(){
+  $('.icon').css('display', 'inline-block');
+})
+
 
 }); // end document.ready

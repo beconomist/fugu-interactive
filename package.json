@@ -8,6 +8,7 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "body-parser": "^1.15.2",
     "bootstrap": "^3.3.6",
     "express": "^4.13.4",
     "fullpage.js": "^2.8.2",

@@ -1,5 +1,5 @@
-// var express = require('express');
-// var app = express();
+var express = require('express');
+var app = express();
 //
 // app.get('/', function(req, res) {
 //   res.send("Hello World!");
@@ -26,6 +26,14 @@ var fs = require('fs');
 var path = require('path');
 var mime = require('mime');
 var cache = {};
+
+// 處理 form data
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true}));
+app.post('/test', function(req, res) {
+  res.json(req.body);
+
+});
 
 function send404(response) {
   response.writeHead(404, {"Content-Type": "text/plain"});
@@ -61,17 +69,18 @@ function serveStatic(response, cache, absPath) {
 
 var server = http.createServer(function(request, response) {
   var filePath = false;
-  console.log('request.url: ' + request.url);
+
 
   if (request.url == "/") {
     filePath = "public/index.html";
   } else {
     filePath = "public" + request.url;
+    console.log('filaPath: ' + filePath );
   }
-  console.log('filePath: ' + filePath);
+
   var absPath = './' + filePath;
   serveStatic(response, cache, absPath);
-  console.log('absPath: ' + absPath);
+
 });
 
 server.listen(process.env.PORT || 3000, function() {

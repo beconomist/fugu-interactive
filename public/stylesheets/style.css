@@ -114,6 +114,12 @@ img {
   color: #fff;
 }
 
+
+.form-group input {
+  max-width: 400px;
+  margin: auto;
+}
+
 footer {
   margin:  0 auto;
   padding-bottom: 100px;
@@ -156,6 +162,11 @@ ul.topnav li.icon {
   text-align: center;
   padding: 100px;
 }
+.section.pricing h2 {
+  margin-bottom: 50px;
+}
+
+
 
 @media screen and (max-width: 680px) {
   ul.topnav li:not(:first-child) {
@@ -184,6 +195,9 @@ ul.topnav li.icon {
     text-align: left;
   }
 }
+.section.pricing {
+  padding: 100px 0;
+}
 @media (min-width: 768px) {
   .global-nav-content {
     width: 750px;
@@ -211,7 +225,9 @@ ul.topnav li.icon {
   }
   .round-shape {
     margin: 15px;
+    text-align: center;
   }
+
   #iphone-gif {
     position: relative;
     top:60px;
