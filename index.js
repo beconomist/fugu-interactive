@@ -45,7 +45,7 @@ var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var ObjectId = require('mongodb').ObjectId;
 // var url = 'mongodb://localhost:27017/test'; // Mongo URI for Development
-var url = ' mongodb://bao :00hottiedude@ds139655.mlab.com:39655/heroku_lcw1f34v'  // Mongo URI for Production
+var url = ' mongodb://heroku_lcw1f34v :6liqpfrh6u935hipd3okag5b4t@ds139655.mlab.com:39655/heroku_lcw1f34v'  // Mongo URI for Production
 
 var insertDocument = function(db, callback) {
   db.collection('emails').insertOne({
