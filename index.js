@@ -42,12 +42,12 @@ var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var ObjectId = require('mongodb').ObjectId;
 var url = "";
-app.configure('development', function() {
+
+if (process.env.NODE_ENV=='development') {
   url = 'mongodb://localhost:27017/test'
-})
-app.configure('production', function() {
+} else if (process.env.NODE_ENV=='production') {
   url = "mongodb://heroku_lcw1f34v :6liqpfrh6u935hipd3okag5b4t@ds139655.mlab.com:39655/heroku_lcw1f34v"
-});
+};
 
 var insertDocument = function(db, callback) {
   db.collection('emails').insertOne({
