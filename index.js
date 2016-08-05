@@ -18,7 +18,7 @@ app.use(express.static('public'));
 
 // 啟動伺服器
 app.listen(process.env.PORT || 3000, function() {
-  console.log("Fugu-Interactive app is running on port 3000!");
+  console.log("Fugu-Interactive app is running on port 3000 in " + process.env.NODE_ENV + " mode!");
 });
 
 // 處理 form data
@@ -27,11 +27,8 @@ var emailInput = "";
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.post('/', function(req, res, emailHandler) {
-
   console.log("The user entered " + req.body.email);
-
   emailInput = req.body.email;
-
   MongoClient.connect(url, function(err, db) {
     assert.equal(null, err);
     insertDocument(db, function() {
@@ -44,8 +41,13 @@ app.post('/', function(req, res, emailHandler) {
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var ObjectId = require('mongodb').ObjectId;
-// var url = 'mongodb://localhost:27017/test'; // Mongo URI for Development
-var url = ' mongodb://heroku_lcw1f34v :6liqpfrh6u935hipd3okag5b4t@ds139655.mlab.com:39655/heroku_lcw1f34v'  // Mongo URI for Production....
+var url = "";
+app.configure('development', function() {
+  url = 'mongodb://localhost:27017/test'
+})
+app.configure('production', function() {
+  url = "mongodb://heroku_lcw1f34v :6liqpfrh6u935hipd3okag5b4t@ds139655.mlab.com:39655/heroku_lcw1f34v"
+});
 
 var insertDocument = function(db, callback) {
   db.collection('emails').insertOne({
