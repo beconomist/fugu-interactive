@@ -44,9 +44,11 @@ var ObjectId = require('mongodb').ObjectId;
 var url = "";
 
 if (process.env.NODE_ENV=='development') {
+  console.error(url);
   url = 'mongodb://localhost:27017/test'
 } else if (process.env.NODE_ENV=='production') {
-  url = "mongodb://heroku_lcw1f34v :6liqpfrh6u935hipd3okag5b4t@ds139655.mlab.com:39655/heroku_lcw1f34v"
+  console.error(url);
+  url = "mongodb://heroku_lcw1f34v:6liqpfrh6u935hipd3okag5b4t@ds139655.mlab.com:39655/heroku_lcw1f34v"
 };
 
 var insertDocument = function(db, callback) {
