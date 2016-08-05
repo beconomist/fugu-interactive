@@ -10,8 +10,10 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.6",
+    "connect": "^3.4.1",
     "express": "^4.13.4",
     "fullpage.js": "^2.8.2",
+    "mongodb": "^2.2.5",
     "nodemailer": "^2.5.0"
   },
   "engines": {
