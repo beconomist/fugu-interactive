@@ -7,10 +7,9 @@ $(document).ready(function() {
 
 $('.image-slider').slick({
   autoplay: true,
-  autoplaySpeed: 3000,
-  dots: true
+  autoplaySpeed: 4000,
+  arrows: false
 });
-
 
 $('.round-shape').hover(function(){
   $('.icon').css('display', 'inline-block');

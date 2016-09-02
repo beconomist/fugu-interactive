@@ -1,13 +1,18 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
+
 #home {
   font-family: 'Noto Sans TC', sans-serif;
+  color: #fff;
 }
 
 .global-nav {
   background-color: #000;
   width: 100%;
-  max-height: 44px;
+  max-height: 59px;
+}
+.footer-nav {
+
 }
 
 .global-nav-content {
@@ -15,10 +20,74 @@
   max-width: 1170px;
 }
 
-#logo {
-  font-size: 1.2em;
-  font-weight: bolder;
+.footer-nav-content {
+  margin: 0 auto;
+  max-width: 1170px;
 }
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+section.main {
+  background-image: url("/images/shop.jpg");
+  /*position: absolute;*/
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /*z-index: -100;*/
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+section.features, section.product-details, section.how-to {
+  color: #333;
+}
+section.branding {
+  background-image: url("/images/cafe.jpg");
+  /*position: absolute;*/
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /*z-index: -100;*/
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section.social-media {
+  background-image: url("/images/briefcase.jpg");
+  /*position: absolute;*/
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /*z-index: -100;*/
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#logo {
+  width: 60px;
+}
+#footer-logo {
+  width: 100px;
+}
+.separator-group {
+  height: 1px;
+  width: 100%;
+  position: relative;
+}
+
+.separator-line {
+  position: absolute;
+  border-bottom: 2px solid #333;
+}
+
 
 .container section:not(:first-child) {
   border-top: 2px solid #d6d6d6;
@@ -26,47 +95,62 @@
 }
 
 .banner-image {
-  margin: 50px auto 50px auto;
   text-align: center;
 }
-
-#iphone-gif {
-  position: relative;
-  top:20px;
-  width: 20%;
-  margin-right: 20px;
+.banner-image img {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #ipad-gif {
-  width: 70%;
+  width: 80%;
+}
+.feature, .step {
+  padding: 0 20px;
+}
+
+.feature .fa,.step .fa {
+  font-size: 40px;
+  line-height: 2em;
+}
+
+.feature-description {
+  text-align: center;
 }
 
 
+
 img {
-  width: 100%;
-  max-width: 800px;
+  width: 80%;
+  max-width: 600px;
 }
 .banner-description {
   margin: 0 auto;
   text-align: center;
 }
 .banner-description h2 {
-  font-family: serif;
   font-size: 28px;
+  font-weight:bold;
+}
+.main .banner-description h2,.branding .banner-description h2,.social-media .banner-description h2,.pricing .banner-description h2 {
+  text-shadow: 1px 1px #000;
+}
+.sub-title {
+  color: #90C3D4;
 }
 
 .banner-description-side {
     /* 絕對定位，位置依 media 不同而不同 */
     margin: 0 auto;
+    padding: 20px;
     text-align: center;
 }
 .banner-description-side h2 {
-  font-family: serif;
   font-size: 28px;
+  font-weight:bold;
   margin-bottom: 20px;
 }
 .banner-description-side p {
-  font-family: serif;
   font-size: 16px;
 }
 
@@ -79,22 +163,34 @@ img {
   text-align: center;
 }
 
+
 .next-button {
   width: 200px;
   background-color: #000;
-  color: #fff
+  color: #fff;
+  transition: 0.5s;
+}
+.next-button:hover {
+  /*background-color: #fff;*/
+  /*border-width: 2px;*/
+  border-color: #000;
+  color: #000;
 }
 
 .btn-submit {
+  background-color: transparent;
+  border-color: #fff;
+  border-width: 2px;
   width: 200px;
   font-size: 18px;
+  transition: 0.5s;
+}
+.btn-submit:hover {
+  background-color: #000;
+  border-color: #000;
 }
 
-.how-to {
-  margin: 0 auto;
-  text-align: center;
-  padding: 100px 0;
-}
+
 
 .round-shape {
   margin: 30px auto;
@@ -114,19 +210,64 @@ img {
   color: #fff;
 }
 
+.step .round-shape {
+  margin: 30px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  line-height: 200px;
+  color: #000;
+  text-align: center;
+  font-size: 28px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.step .round-shape:hover {
+  background-color: #000;
+  color: #fff;
+}
+.step .fa {
+  position: relative;
+  top: -50px;
+}
+
+.step .feature-description {
+  margin-top: 20px;
+}
+
+.arrow-wrapper {
+    margin-top: 50px;
+    text-align: center;
+    /*height: 0px;*/
+    /*font-size: 40px;*/
+    /*line-height: 40px;*/
+}
+@-webkit-keyframes bounce {
+	0%, 20%, 60%, 100%  { -webkit-transform: translateY(0); }
+    40%  { -webkit-transform: translateY(-20px); }
+	80% { -webkit-transform: translateY(-10px); }
+}
+.arrow {
+    width: 50px;
+    margin: 0 auto;
+    -webkit-animation: bounce 2s infinite ease-in-out;
+}
+
+
+
+
 
 .form-group input {
-  max-width: 400px;
+  max-width: 300px;
   margin: auto;
 }
 
 footer {
-  margin:  0 auto;
-  padding-bottom: 100px;
+  background-color: #000;
+  padding: 20px 0 100px 0;
   text-align: center;
-  border-top: 2px solid #d6d6d6;
 }
-
 ul.topnav {
   list-style-type: none;
   margin: 0;
@@ -150,6 +291,7 @@ ul.topnav li a {
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
   font-size: 15px;
+  line-height: 2.4;  /* 為了讓文字垂直置中 */
 }
 ul.topnav li a:hover {
   background-color: #333;
@@ -157,15 +299,72 @@ ul.topnav li a:hover {
 ul.topnav li.icon {
   display: none;
 }
+
+/* footer nav  */
+ul.bottomnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+/* Float the list items side by side */
+ul.bottomnav li{
+  /*float: left;*/
+  display:inline-block;
+}
+/*ul.bottomnav li:first-child {
+  margin-right: 30px;
+}*/
+ul.bottomnav li a {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  font-size: 15px;
+  line-height: 2.4;  /* 為了讓文字垂直置中 */
+}
+ul.bottomnav li a:hover {
+  background-color: #333;
+}
+
 .section.pricing {
   margin: auto;
   text-align: center;
   padding: 100px;
+  background-image: url("/images/accessory.jpg");
+  /*position: absolute;*/
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /*z-index: -100;*/
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .section.pricing h2 {
   margin-bottom: 50px;
 }
 
+.how-to {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mockup-ui {
+  margin-top: 50px;
+  top: 350px;
+
+  /*height: 300px;*/
+  /*background-color: #000;*/
+}
+#iphone-gif {
+  width: 40%;
+}
 
 
 @media screen and (max-width: 680px) {
@@ -194,6 +393,17 @@ ul.topnav li.icon {
     display: block;
     text-align: left;
   }
+  /*#ipad-gif {
+    width: 50%;
+  }*/
+
+  .feature-description {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 80%;
+  }
+
+
 }
 .section.pricing {
   padding: 100px 0;
@@ -218,28 +428,34 @@ ul.topnav li.icon {
   .banner-description-side {
     top: 90px;
     left: 660px;
-
+    padding: 0 50px;
   }
-  .banner-description h2, .banner-description-side h2  {
-    font-size: 42px;
-  }
+  /*.banner-description h2, .banner-description-side h2  {
+    font-size: 36px;
+  }*/
   .round-shape {
     margin: 15px;
     text-align: center;
   }
 
-  #iphone-gif {
-    position: relative;
-    top:60px;
-    width: 18%;
-    margin-right: 20px;
-    /*display:inline-block;*/
-  }
   #ipad-gif {
-    width: 70%;
+    width: 50%;
     /*display:inline-block;*/
   }
 
+  #iphone-gif {
+    width: 60%;
+    max-width: 320px;
+  }
+
+
+
+  .feature-description {
+    text-align: left;
+  }
+  img {
+    width: 50%;
+  }
 }
 
 
@@ -248,15 +464,20 @@ ul.topnav li.icon {
   .global-nav-content {
     width: 1170px;
   }
-  .banner-description-side {
+  /*.banner-description-side {
     top: 90px;
     left: 750px;
-  }
-  .banner-description h2, .banner-description-side h2  {
-    font-size: 48px;
+    padding: 0 100px;
+  }*/
+  /*.banner-description h2, .banner-description-side h2  {
+    font-size: 36px;
   }
   .banner-description-side p {
-    font-size: 24px;
+    font-size: 16px;
+  }*/
+
+  img {
+    width: 50%;
   }
 
   section.branding, section.product-details, section.social-media {
@@ -264,12 +485,12 @@ ul.topnav li.icon {
   }
   section.branding .banner-image, section.social-media .banner-image {
     position: relative;
-    left: -160px;
+    left: -180px;
   }
   section.branding .banner-description-side, section.social-media .banner-description-side {
     position: absolute;;
-    top: 90px;
-    left: 700px;
+    top: 80px;
+    left: 850px;
     margin: 0 auto;
     text-align: left;
   }
@@ -277,18 +498,47 @@ ul.topnav li.icon {
   .round-shape {
     margin: 30px;
   }
-  #iphone-gif {
-    position: relative;
-    top:70px;
-    width: 18%;
-    margin-right: 20px;
-    /*display:inline-block;*/
-  }
+
   #ipad-gif {
-    width: 70%;
+    width: 40%;
     /*display:inline-block;*/
   }
 
+  .feature-group {
+    width: 1280px;
+    margin: 0 auto;
+  }
+
+}
+
+@media (min-width: 1400px) {
+  section.branding .banner-image, section.social-media .banner-image {
+    position: relative;
+    left: -250px;
+  }
+  section.branding .banner-description-side, section.social-media .banner-description-side {
+    position: absolute;;
+    top: 120px;
+    left: 900px;
+    max-width: 500px;
+  }
+
+}
+
+@media (min-width: 1650px) {
+  section.branding .banner-image, section.social-media .banner-image {
+    position: relative;
+    left: -300px;
+  }
+  section.branding .banner-description-side, section.social-media .banner-description-side {
+    position: absolute;;
+    top: 120px;
+    left: 1000px;
+    max-width: 500px;
+  }
+  #iphone-gif {
+    width: 40%;
+  }
 
 
 }

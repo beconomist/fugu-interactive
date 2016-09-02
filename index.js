@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
   res.sendFile('public/index.html', {root: __dirname})
 });
 
-// 讓伺服器提供 public 檔案夾裡的檔案
+// 設定讓伺服器提供 public 檔案夾裡的檔案
 app.use(express.static('public'));
 
 // 啟動伺服器
@@ -26,6 +26,7 @@ var emailInput = "";
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
 app.post('/', function(req, res, emailHandler) {
   console.log("The user entered " + req.body.email);
   emailInput = req.body.email;
@@ -35,7 +36,7 @@ app.post('/', function(req, res, emailHandler) {
       db.close();
     });
   });
-})
+});
 
 // 以下為 MongoDB 程式碼
 var MongoClient = require('mongodb').MongoClient;
@@ -55,6 +56,7 @@ var insertDocument = function(db, callback) {
   db.collection('emails').insertOne({
     "email" : emailInput
 }, function(err, result) {
+  // if (err) throw err;
   assert.equal(err, null);
   console.log("Inserted " + emailInput + " into the emails collection ");
   callback();
